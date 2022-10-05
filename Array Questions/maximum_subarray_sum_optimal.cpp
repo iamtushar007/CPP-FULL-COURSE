@@ -6,21 +6,24 @@ int main()
     int n;
     cin >> n;
     int arr[n];
-
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
+    int currentSum = 0;
+    int maxSum = INT_MIN;
     for (int i = 0; i < n; i++)
     {
-        int current_sum = 0;
-        for (int j = i; j < n; j++)
+        currentSum += arr[i];
+        if (currentSum < 0)
         {
-            current_sum += arr[j];
-            cout << current_sum << endl;
+            currentSum = 0;
         }
+        maxSum = max(maxSum, currentSum);
     }
+
+    cout << maxSum << endl;
 
     return 0;
 }

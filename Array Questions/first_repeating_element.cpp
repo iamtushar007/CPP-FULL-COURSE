@@ -3,8 +3,7 @@ using namespace std;
 
 int main()
 {
-    int x;
-    cin >> x;
+
     int n;
     cin >> n;
     int arr[n];
@@ -13,9 +12,9 @@ int main()
         cin >> arr[i];
     }
 
-    const int N = 1e6 + 2;
+    const int N = 100000;
     int idx[N];
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < N; i++)
     {
         idx[i] = -1;
     }

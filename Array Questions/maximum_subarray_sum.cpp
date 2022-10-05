@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <climits>
 using namespace std;
 int main()
 {
@@ -6,21 +7,26 @@ int main()
     int n;
     cin >> n;
     int arr[n];
-
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
+    int maxSum = INT_MIN;
+
     for (int i = 0; i < n; i++)
     {
-        int current_sum = 0;
         for (int j = i; j < n; j++)
         {
-            current_sum += arr[j];
-            cout << current_sum << endl;
+            int sum = 0;
+            for (int k = i; k < n; k++)
+            {
+                sum += arr[k];
+            }
+            maxSum = max(maxSum, sum);
         }
     }
 
+    cout << maxSum << endl;
     return 0;
 }

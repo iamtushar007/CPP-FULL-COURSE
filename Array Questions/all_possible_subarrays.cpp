@@ -14,11 +14,13 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
-        int current_sum = 0;
         for (int j = i; j < n; j++)
         {
-            current_sum += arr[j];
-            cout << current_sum << endl;
+            for (int k = i; k <= j; k++)
+            {
+                cout << arr[k] << " ";
+            }
+            cout << endl;
         }
     }
 

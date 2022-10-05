@@ -2,35 +2,34 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin >> n;
-    int arr[n];
+
+    int n, s;
+    cin >> n >> s;
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
-    int mx = arr[0];
-    for (int i = 0; i < n; i++)
-    {
-        mx = max(arr[i], mx);
-    }
-
-    int output[n];
-    int count[mx];
-
-    for (int i = 0; i < n; ++i)
-    {
-        count[i] = 0;
-    }
-    for (int i = 0; i < n; i++)
-    {
-        count[arr[i]]++;
-    }
+    int st, en;
+    int currentSums = 0;
 
     for (int i = 0; i < n; i++)
     {
-        cout << "count of " << i << "is:\t" << count[i] << endl;
+        st = 0;
+        en = 0;
+        if (currentSums + arr[i] > s)
+        {
+            int ind = en;
+        }
+        else
+        {
+            en++;
+        }
+        currentSums = currentSums + ar[i];
+
+
+
+        
     }
 
     return 0;
