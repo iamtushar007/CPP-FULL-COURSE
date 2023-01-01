@@ -15,6 +15,8 @@ void printMaxActivities(int s[], int f[], int n)
         }
     }
 }
+
+
 int main()
 {
     int s[] = {1, 3, 0, 5, 8, 5};

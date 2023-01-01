@@ -25,7 +25,6 @@ void printSolution(int dist[])
 void dijkstra(int graph[V][V], int src)
 {
     int dist[V];
-
     bool sptSet[V];
 
     for (int i = 0; i < V; i++)
